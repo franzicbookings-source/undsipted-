@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function App() {
@@ -122,27 +122,49 @@ export default function App() {
             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80"></div>
             <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
           </div>
-          <div className="relative z-10 px-6 md:px-12 max-w-5xl">
-            <h1 className="font-headline text-5xl sm:text-6xl md:text-9xl font-black italic uppercase tracking-tighter leading-[0.9] sm:leading-[0.85] text-white mb-6">
+          <div className="relative z-10 px-4 md:px-12 max-w-5xl">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-9xl font-black italic uppercase tracking-tighter leading-[0.9] sm:leading-[0.85] text-white mb-6">
               UNLEASH <br/> <span className="text-[#FF0033]">YOUR POWER</span>
             </h1>
-            <p className="font-body text-on-surface-variant text-base sm:text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-light">
+            <p className="font-body text-on-surface-variant text-base sm:text-base md:text-xl max-w-2xl mb-10 leading-relaxed font-light">
               State-of-the-art gym with everything you need to achieve your fitness goals. No contracts. No joining fees. <span className="text-secondary-fixed">Just raw strength and modern equipment.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#FF0033] hover:bg-[#ff1a4a] text-white px-8 md:px-10 py-4 md:py-5 font-headline font-black uppercase italic tracking-tighter text-lg md:text-xl transition-all hover:translate-x-2">
+              <button className="bg-[#FF0033] hover:bg-[#ff1a4a] text-white px-8 md:px-10 py-4 md:py-5 font-headline font-black uppercase italic tracking-tighter text-base md:text-xl transition-all hover:translate-x-2">
                 START YOUR JOURNEY
               </button>
-              <button className="border border-outline-variant/30 hover:bg-white/5 text-secondary px-8 md:px-10 py-4 md:py-5 font-headline font-black uppercase italic tracking-tighter text-lg md:text-xl transition-all">
+              <button className="border border-outline-variant/30 hover:bg-white/5 text-secondary px-8 md:px-10 py-4 md:py-5 font-headline font-black uppercase italic tracking-tighter text-base md:text-xl transition-all">
                 LEARN MORE
               </button>
             </div>
           </div>
         </section>
 
+        {/* Video Section */}
+        <section className="py-12 md:py-24 px-4 md:px-12 bg-surface border-b border-neutral-800">
+          <div className="max-w-5xl mx-auto">
+            <div className="mb-10 text-center">
+              <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
+                ABOUT OUR <span className="text-[#FF0033]">GYM</span>
+              </h2>
+            </div>
+            <div className="w-full shadow-2xl border border-neutral-800 rounded-xl overflow-hidden bg-black">
+              <div style={{ padding: '75.00% 0 0 0', position: 'relative' }}>
+                <iframe 
+                  src="https://player.vimeo.com/video/1178846043?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479%2Fembed&amp;title=0&amp;byline=0&amp;portrait=0" 
+                  allow="autoplay; fullscreen; picture-in-picture" 
+                  allowFullScreen 
+                  frameBorder="0" 
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Built for Champions Section */}
-        <section className="bg-surface-container-lowest py-16 md:py-24 px-6 md:px-12" id="about">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+        <section className="bg-surface-container-lowest py-12 md:py-24 px-4 md:px-12" id="about">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
             <div className="w-full lg:w-1/2 relative group">
               <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border-2 border-[#FF0033] z-0 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
               <img 
@@ -152,10 +174,10 @@ export default function App() {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="font-headline text-4xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-6 md:mb-8">
+              <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-6 md:mb-8">
                 BUILT FOR <span className="text-[#FF0033]">CHAMPIONS</span>
               </h2>
-              <div className="space-y-6 font-body text-on-surface-variant text-base sm:text-lg leading-relaxed">
+              <div className="space-y-6 font-body text-on-surface-variant text-sm sm:text-lg leading-relaxed">
                 <p>
                   At UNDISPUTED, we've stripped away the fluff of modern fitness. This is a sanctuary for those who respect the iron. Our culture is rooted in the golden era of bodybuilding, enhanced by cutting-edge biometric feedback.
                 </p>
@@ -165,11 +187,11 @@ export default function App() {
               </div>
               <div className="grid grid-cols-2 gap-4 md:gap-8 mt-10 md:mt-12">
                 <div className="bg-surface-container-low p-4 md:p-6 flex flex-col gap-1 md:gap-2">
-                  <span className="text-[#FFFF00] font-headline text-3xl md:text-4xl font-black italic">2K+</span>
+                  <span className="text-[#FFFF00] font-headline text-2xl md:text-4xl font-black italic">2K+</span>
                   <span className="font-label uppercase tracking-widest text-[10px] md:text-xs text-tertiary">Active Members</span>
                 </div>
                 <div className="bg-surface-container-low p-4 md:p-6 flex flex-col gap-1 md:gap-2">
-                  <span className="text-[#FFFF00] font-headline text-3xl md:text-4xl font-black italic text-glow">EXPERT</span>
+                  <span className="text-[#FFFF00] font-headline text-2xl md:text-4xl font-black italic text-glow">EXPERT</span>
                   <span className="font-label uppercase tracking-widest text-[10px] md:text-xs text-tertiary">Pro Trainers</span>
                 </div>
               </div>
@@ -178,19 +200,19 @@ export default function App() {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 md:py-24 px-6 md:px-12 bg-surface" id="training">
+        <section className="py-12 md:py-24 px-4 md:px-12 bg-surface" id="training">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-12 md:mb-16 text-center md:text-left">
-              <h2 className="font-headline text-4xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter">OUR <span className="text-[#FF0033]">SERVICES</span></h2>
+            <div className="mb-8 md:mb-16 text-center md:text-left">
+              <h2 className="font-headline text-3xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter">OUR <span className="text-[#FF0033]">SERVICES</span></h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0">
               {/* Card 1 */}
-              <div className="group bg-surface-container-low p-8 md:p-10 border-b md:border-b-0 md:border-r border-neutral-800 last:border-0 hover:bg-surface-container-high transition-colors">
+              <div className="group bg-surface-container-low p-5 md:p-10 border-b md:border-b-0 md:border-r border-neutral-800 last:border-0 hover:bg-surface-container-high transition-colors">
                 <div className="mb-6 md:mb-8 text-[#FF0033] group-hover:scale-110 transition-transform origin-left">
                   <span className="material-symbols-outlined text-5xl md:text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>fitness_center</span>
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">STRENGTH TRAINING</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-sm md:text-base">
+                <h3 className="font-headline text-xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">STRENGTH TRAINING</h3>
+                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-xs sm:text-sm md:text-base">
                   Raw power programs designed to maximize hypertrophy and absolute strength. No fluff, just results.
                 </p>
                 <ul className="space-y-3 font-label text-[10px] md:text-sm text-tertiary uppercase tracking-wider">
@@ -200,12 +222,12 @@ export default function App() {
                 </ul>
               </div>
               {/* Card 2 */}
-              <div className="group bg-surface-container-low p-8 md:p-10 border-b md:border-b-0 md:border-r border-neutral-800 last:border-0 hover:bg-surface-container-high transition-colors">
+              <div className="group bg-surface-container-low p-5 md:p-10 border-b md:border-b-0 md:border-r border-neutral-800 last:border-0 hover:bg-surface-container-high transition-colors">
                 <div className="mb-6 md:mb-8 text-[#FF0033] group-hover:scale-110 transition-transform origin-left">
                   <span className="material-symbols-outlined text-5xl md:text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>groups</span>
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">PERSONAL TRAINING</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-sm md:text-base">
+                <h3 className="font-headline text-xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">PERSONAL TRAINING</h3>
+                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-xs sm:text-sm md:text-base">
                   Work with HFPA qualified trainers who live the lifestyle. Personalized blueprints for your specific physique goals.
                 </p>
                 <ul className="space-y-3 font-label text-[10px] md:text-sm text-tertiary uppercase tracking-wider">
@@ -215,12 +237,12 @@ export default function App() {
                 </ul>
               </div>
               {/* Card 3 */}
-              <div className="group bg-surface-container-low p-8 md:p-10 last:border-0 hover:bg-surface-container-high transition-colors">
+              <div className="group bg-surface-container-low p-5 md:p-10 last:border-0 hover:bg-surface-container-high transition-colors">
                 <div className="mb-6 md:mb-8 text-[#FF0033] group-hover:scale-110 transition-transform origin-left">
                   <span className="material-symbols-outlined text-5xl md:text-6xl" style={{ fontVariationSettings: "'FILL' 1" }}>schedule</span>
                 </div>
-                <h3 className="font-headline text-2xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">EXTENDED HOURS</h3>
-                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-sm md:text-base">
+                <h3 className="font-headline text-xl md:text-3xl font-black uppercase italic tracking-tighter mb-4">EXTENDED HOURS</h3>
+                <p className="font-body text-on-surface-variant leading-relaxed mb-6 text-xs sm:text-sm md:text-base">
                   Train early or late. We're open from 5 AM on weekdays to fit your schedule.
                 </p>
                 <ul className="space-y-3 font-label text-[10px] md:text-sm text-tertiary uppercase tracking-wider">
@@ -234,75 +256,75 @@ export default function App() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 md:py-24 px-6 md:px-12 bg-surface-container-lowest" id="pricing">
+        <section className="py-12 md:py-24 px-4 md:px-12 bg-surface-container-lowest" id="pricing">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-12 md:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-              <h2 className="font-headline text-4xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter leading-none">SIMPLE <span className="text-[#FF0033]">PRICING</span></h2>
+            <div className="mb-8 md:mb-16 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+              <h2 className="font-headline text-3xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter leading-none">SIMPLE <span className="text-[#FF0033]">PRICING</span></h2>
               <div className="bg-secondary-container text-on-secondary-container px-4 py-2 font-label text-[10px] md:text-xs font-bold uppercase tracking-widest animate-pulse">
                 NO JOINING FEES. NO CONTRACTS.
               </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-neutral-900 border border-neutral-800">
               {/* Walk-In Card */}
-              <div className="bg-surface-container-low p-8 md:p-12 flex flex-col">
-                <div className="flex justify-between items-start mb-8 md:mb-12">
+              <div className="bg-surface-container-low p-6 md:p-12 flex flex-col">
+                <div className="flex justify-between items-start mb-6 md:mb-12">
                   <div>
-                    <h4 className="font-headline text-xl md:text-2xl font-black italic uppercase text-white">WALK INS</h4>
+                    <h4 className="font-headline text-lg md:text-2xl font-black italic uppercase text-white">WALK INS</h4>
                     <p className="text-tertiary font-label text-[10px] md:text-xs tracking-widest uppercase">Casual Walk-In Rate</p>
                   </div>
                   <div className="text-right">
-                    <span className="font-headline text-4xl md:text-5xl font-black text-[#FFFF00]">R70</span>
-                    <span className="text-tertiary font-headline text-lg md:text-xl">/day</span>
+                    <span className="font-headline text-3xl md:text-5xl font-black text-[#FFFF00]">R70</span>
+                    <span className="text-tertiary font-headline text-base md:text-xl">/day</span>
                   </div>
                 </div>
-                <ul className="space-y-4 md:space-y-6 mb-10 md:mb-12 flex-grow">
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                <ul className="space-y-4 md:space-y-6 mb-6 md:mb-12 flex-grow">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">1 Day Gym Access</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">All Modern Equipment</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Free Secure Parking</span>
                   </li>
                 </ul>
-                <button className="w-full bg-white text-black font-headline font-black uppercase italic py-4 md:py-5 text-lg md:text-xl hover:bg-[#FF0033] hover:text-white transition-colors">
+                <button className="w-full bg-white text-black font-headline font-black uppercase italic py-4 md:py-5 text-base md:text-xl hover:bg-[#FF0033] hover:text-white transition-colors">
                   GET DAY PASS
                 </button>
               </div>
               {/* Monthly Card */}
-              <div className="bg-surface-container-low p-8 md:p-12 flex flex-col">
-                <div className="flex justify-between items-start mb-8 md:mb-12">
+              <div className="bg-surface-container-low p-6 md:p-12 flex flex-col">
+                <div className="flex justify-between items-start mb-6 md:mb-12">
                   <div>
-                    <h4 className="font-headline text-xl md:text-2xl font-black italic uppercase text-white">MONTHLY</h4>
+                    <h4 className="font-headline text-lg md:text-2xl font-black italic uppercase text-white">MONTHLY</h4>
                     <p className="text-tertiary font-label text-[10px] md:text-xs tracking-widest uppercase">Full Access Pass</p>
                   </div>
                   <div className="text-right">
-                    <span className="font-headline text-4xl md:text-5xl font-black text-[#FFFF00]">R270</span>
-                    <span className="text-tertiary font-headline text-lg md:text-xl">/mo</span>
+                    <span className="font-headline text-3xl md:text-5xl font-black text-[#FFFF00]">R270</span>
+                    <span className="text-tertiary font-headline text-base md:text-xl">/mo</span>
                   </div>
                 </div>
-                <ul className="space-y-4 md:space-y-6 mb-10 md:mb-12 flex-grow">
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                <ul className="space-y-4 md:space-y-6 mb-6 md:mb-12 flex-grow">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Full Gym Access</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">All Modern Equipment</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">No Contractual Obligations</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Free Secure Parking</span>
                   </li>
-                  <li className="flex items-start gap-3 text-on-surface text-sm md:text-base bg-surface-container-highest p-3 mt-2">
+                  <li className="flex items-start gap-3 text-on-surface text-xs sm:text-sm md:text-base bg-surface-container-highest p-3 mt-2">
                     <span className="material-symbols-outlined text-[#FFFF00] shrink-0">redeem</span>
                     <div className="flex flex-col">
                       <span className="font-body font-bold text-white uppercase tracking-wider text-xs mb-0.5">Monthly Lucky Draw</span>
@@ -310,39 +332,39 @@ export default function App() {
                     </div>
                   </li>
                 </ul>
-                <button className="w-full bg-white text-black font-headline font-black uppercase italic py-4 md:py-5 text-lg md:text-xl hover:bg-[#FF0033] hover:text-white transition-colors">
+                <button className="w-full bg-white text-black font-headline font-black uppercase italic py-4 md:py-5 text-base md:text-xl hover:bg-[#FF0033] hover:text-white transition-colors">
                   SIGN UP NOW
                 </button>
               </div>
               {/* PT Card */}
-              <div className="bg-surface-container-high p-8 md:p-12 flex flex-col border-t-4 lg:border-t-0 lg:border-l-4 border-[#FF0033]">
-                <div className="flex justify-between items-start mb-8 md:mb-12">
+              <div className="bg-surface-container-high p-6 md:p-12 flex flex-col border-t-4 lg:border-t-0 lg:border-l-4 border-[#FF0033]">
+                <div className="flex justify-between items-start mb-6 md:mb-12">
                   <div>
-                    <h4 className="font-headline text-xl md:text-2xl font-black italic uppercase text-white">ELITE COACHING</h4>
+                    <h4 className="font-headline text-lg md:text-2xl font-black italic uppercase text-white">ELITE COACHING</h4>
                     <p className="text-tertiary font-label text-[10px] md:text-xs tracking-widest uppercase">Personal Training</p>
                   </div>
                   <div className="text-right">
-                    <span className="font-headline text-3xl md:text-4xl font-black text-[#FFFF00]">CUSTOM</span>
+                    <span className="font-headline text-2xl md:text-4xl font-black text-[#FFFF00]">CUSTOM</span>
                   </div>
                 </div>
-                <ul className="space-y-4 md:space-y-6 mb-10 md:mb-12 flex-grow">
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                <ul className="space-y-4 md:space-y-6 mb-6 md:mb-12 flex-grow">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">1-on-1 Professional Coaching</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Personalized Nutrition Programs</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Weekly Progress Tracking</span>
                   </li>
-                  <li className="flex items-center gap-4 text-on-surface text-sm md:text-base">
+                  <li className="flex items-center gap-4 text-on-surface text-xs sm:text-sm md:text-base">
                     <span className="material-symbols-outlined text-[#FF0033]">check_circle</span>
                     <span className="font-body">Expert Support Access</span>
                   </li>
-                  <li className="flex items-start gap-3 text-on-surface text-sm md:text-base bg-surface-container-highest p-3 mt-2">
+                  <li className="flex items-start gap-3 text-on-surface text-xs sm:text-sm md:text-base bg-surface-container-highest p-3 mt-2">
                     <span className="material-symbols-outlined text-[#FFFF00] shrink-0">redeem</span>
                     <div className="flex flex-col">
                       <span className="font-body font-bold text-white uppercase tracking-wider text-xs mb-0.5">Monthly Lucky Draw</span>
@@ -350,7 +372,7 @@ export default function App() {
                     </div>
                   </li>
                 </ul>
-                <button className="w-full bg-[#FF0033] text-white font-headline font-black uppercase italic py-4 md:py-5 text-lg md:text-xl hover:bg-[#ff1a4a] transition-colors">
+                <button className="w-full bg-[#FF0033] text-white font-headline font-black uppercase italic py-4 md:py-5 text-base md:text-xl hover:bg-[#ff1a4a] transition-colors">
                   ENQUIRE NOW
                 </button>
               </div>
@@ -359,15 +381,15 @@ export default function App() {
         </section>
 
         {/* Monthly Lucky Draw Section */}
-        <section className="py-16 md:py-24 px-6 md:px-12 bg-neutral-900 border-y border-neutral-800 relative overflow-hidden" id="rewards">
+        <section className="py-12 md:py-24 px-4 md:px-12 bg-neutral-900 border-y border-neutral-800 relative overflow-hidden" id="rewards">
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 items-center">
               <div className="w-full lg:w-1/2">
                 <div className="inline-flex items-center gap-2 bg-[#FFFF00] text-black px-4 py-1.5 font-label text-xs md:text-sm font-bold uppercase tracking-widest mb-6 md:mb-8">
                   <span className="material-symbols-outlined text-[18px]">redeem</span>
                   MEMBER REWARDS
                 </div>
-                <h2 className="font-headline text-4xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-6">
+                <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-6">
                   THE <span className="text-[#FF0033]">LUCKY</span> DRAW
                 </h2>
                 <p className="font-body text-on-surface-variant text-base md:text-lg lg:text-xl leading-relaxed mb-8 max-w-2xl">
@@ -376,17 +398,17 @@ export default function App() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-surface-container-low p-4 border-l-2 border-[#FFFF00]">
                     <span className="material-symbols-outlined text-[#FFFF00] mb-2 text-3xl">workspace_premium</span>
-                    <h5 className="font-headline font-bold text-white uppercase text-sm md:text-base">Premium Apparel</h5>
+                    <h5 className="font-headline font-bold text-white uppercase text-xs sm:text-sm md:text-base">Premium Apparel</h5>
                   </div>
                   <div className="bg-surface-container-low p-4 border-l-2 border-[#FF0033]">
                     <span className="material-symbols-outlined text-[#FF0033] mb-2 text-3xl">bolt</span>
-                    <h5 className="font-headline font-bold text-white uppercase text-sm md:text-base">Elite Supplements</h5>
+                    <h5 className="font-headline font-bold text-white uppercase text-xs sm:text-sm md:text-base">Elite Supplements</h5>
                   </div>
                 </div>
               </div>
               
               <div className="w-full lg:w-1/2">
-                <h3 className="font-headline text-2xl md:text-3xl font-black uppercase italic text-white mb-6 border-b border-neutral-800 pb-4">
+                <h3 className="font-headline text-xl md:text-3xl font-black uppercase italic text-white mb-6 border-b border-neutral-800 pb-4">
                   PREVIOUS WINNERS
                 </h3>
                 <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -421,11 +443,11 @@ export default function App() {
         </section>
 
         {/* Google Testimonials Section */}
-        <section className="bg-surface-container-lowest py-16 md:py-24 px-6 md:px-12 border-t border-neutral-800">
+        <section className="bg-surface-container-lowest py-12 md:py-24 px-4 md:px-12 border-t border-neutral-800">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-center mb-12 md:mb-16 gap-6">
+            <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-16 gap-6">
               <div>
-                <h2 className="font-headline text-4xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
+                <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
                   WHAT OUR <span className="text-[#FF0033]">MEMBERS SAY</span>
                 </h2>
                 <div className="flex items-center gap-3">
@@ -451,9 +473,9 @@ export default function App() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
               {testimonials.map((review, index) => (
-                <div key={index} className="bg-surface-container-highest p-6 md:p-8 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
+                <div key={index} className="bg-surface-container-highest p-5 md:p-8 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
                   <div className="flex justify-between items-start mb-6">
                     <div className="flex items-center gap-4">
                       <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full" />
@@ -481,22 +503,22 @@ export default function App() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 md:py-24 px-6 md:px-12 bg-surface relative overflow-hidden" id="contact">
+        <section className="py-12 md:py-24 px-4 md:px-12 bg-surface relative overflow-hidden" id="contact">
           <div className="absolute right-0 top-0 w-1/2 h-full opacity-5 pointer-events-none hidden lg:block">
             <span className="font-headline text-[30rem] font-black italic uppercase select-none leading-none">IRON</span>
           </div>
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
               <div>
-                <h2 className="font-headline text-4xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter leading-none mb-10 md:mb-12">GET IN <span className="text-[#FF0033]">TOUCH</span></h2>
+                <h2 className="font-headline text-3xl sm:text-5xl md:text-8xl font-black uppercase italic tracking-tighter leading-none mb-6 md:mb-12">GET IN <span className="text-[#FF0033]">TOUCH</span></h2>
                 <div className="space-y-8 md:space-y-12">
                   <div className="flex gap-4 md:gap-6 items-start">
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-surface-container-highest flex items-center justify-center text-[#FF0033] flex-shrink-0" title="Our Location">
                       <span className="material-symbols-outlined">location_on</span>
                     </div>
                     <div>
-                      <h5 className="font-headline text-lg md:text-xl font-bold uppercase tracking-tighter text-white mb-2">LOCATION</h5>
-                      <p className="font-body text-on-surface-variant text-sm md:text-base">18 Harding Street, Newcastle CBD<br/>South Africa</p>
+                      <h5 className="font-headline text-base md:text-xl font-bold uppercase tracking-tighter text-white mb-2">LOCATION</h5>
+                      <p className="font-body text-on-surface-variant text-xs sm:text-sm md:text-base">18 Harding Street, Newcastle CBD<br/>South Africa</p>
                     </div>
                   </div>
                   <div className="flex gap-4 md:gap-6 items-start">
@@ -504,8 +526,8 @@ export default function App() {
                       <span className="material-symbols-outlined">call</span>
                     </div>
                     <div>
-                      <h5 className="font-headline text-lg md:text-xl font-bold uppercase tracking-tighter text-white mb-2">PHONE</h5>
-                      <p className="font-body text-on-surface-variant text-sm md:text-base">+27 76 892 0804</p>
+                      <h5 className="font-headline text-base md:text-xl font-bold uppercase tracking-tighter text-white mb-2">PHONE</h5>
+                      <p className="font-body text-on-surface-variant text-xs sm:text-sm md:text-base">+27 76 892 0804</p>
                     </div>
                   </div>
                   <div className="flex gap-4 md:gap-6 items-start">
@@ -513,13 +535,13 @@ export default function App() {
                       <span className="material-symbols-outlined">mail</span>
                     </div>
                     <div>
-                      <h5 className="font-headline text-lg md:text-xl font-bold uppercase tracking-tighter text-white mb-2">EMAIL</h5>
-                      <p className="font-body text-on-surface-variant text-sm md:text-base">pieromzanone@gmail.com</p>
+                      <h5 className="font-headline text-base md:text-xl font-bold uppercase tracking-tighter text-white mb-2">EMAIL</h5>
+                      <p className="font-body text-on-surface-variant text-xs sm:text-sm md:text-base">pieromzanone@gmail.com</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-surface-container-low p-6 md:p-10">
+              <div className="bg-surface-container-low p-5 md:p-10">
                 <form className="space-y-4 md:space-y-6" onSubmit={handleWhatsAppSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                     <div className="space-y-2">
@@ -539,7 +561,7 @@ export default function App() {
                     <label className="font-label text-[10px] uppercase tracking-widest text-tertiary">MESSAGE</label>
                     <textarea name="message" className="w-full bg-surface-container-highest border-none focus:ring-1 focus:ring-[#FF0033] p-4 text-white font-body text-sm outline-none" placeholder="How can we help you?" rows={4} required></textarea>
                   </div>
-                  <button className="w-full bg-[#FF0033] text-white font-headline font-black uppercase italic py-4 md:py-5 text-lg md:text-xl tracking-tighter hover:bg-[#ff1a4a] transition-all" type="submit">
+                  <button className="w-full bg-[#FF0033] text-white font-headline font-black uppercase italic py-4 md:py-5 text-base md:text-xl tracking-tighter hover:bg-[#ff1a4a] transition-all" type="submit">
                     SEND MESSAGE
                   </button>
                 </form>
@@ -551,7 +573,7 @@ export default function App() {
         {/* Map Section */}
         <section className="w-full h-64 md:h-96 border-t border-neutral-800 bg-neutral-900">
           <iframe
-            src="https://maps.google.com/maps?q=18%20Harding%20Street,%20Newcastle%20CBD,%20South%20Africa&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=18%20Harding%20Street,%20Newcastle,%20South%20Africa+(Undisputed%20Fitness)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
@@ -570,7 +592,7 @@ export default function App() {
           <div>
             <img src="https://i.ibb.co/qMQK3yJ7/292678414-555215579726507-7971978031194556440-n-removebg-preview-1.png" alt="Undisputed Fitness Logo" className="h-12 md:h-16 w-auto" referrerPolicy="no-referrer" />
           </div>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">Instagram</a>
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">YouTube</a>
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>

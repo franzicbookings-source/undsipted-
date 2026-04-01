@@ -27,8 +27,8 @@ export default function About() {
 
   return (
     <Layout>
-      <section className="bg-surface-container-lowest py-16 md:py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+      <section className="bg-surface-container-lowest py-12 md:py-24 px-4 md:px-12">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
           <div className="w-full lg:w-1/2 relative group">
             <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 w-full h-full border-2 border-[#FF0033] z-0 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
             <img 
@@ -38,10 +38,10 @@ export default function About() {
             />
           </div>
           <div className="w-full lg:w-1/2">
-            <h1 className="font-headline text-5xl sm:text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none mb-6 md:mb-8">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none mb-6 md:mb-8">
               BUILT FOR <span className="text-[#FF0033]">CHAMPIONS</span>
             </h1>
-            <div className="space-y-6 font-body text-on-surface-variant text-base sm:text-lg leading-relaxed">
+            <div className="space-y-6 font-body text-on-surface-variant text-sm sm:text-lg leading-relaxed">
               <p>
                 At UNDISPUTED, we've stripped away the fluff of modern fitness. This is a sanctuary for those who respect the iron. Our culture is rooted in the golden era of bodybuilding, enhanced by cutting-edge biometric feedback.
               </p>
@@ -54,11 +54,11 @@ export default function About() {
             </div>
             <div className="grid grid-cols-2 gap-4 md:gap-8 mt-10 md:mt-12">
               <div className="bg-surface-container-low p-4 md:p-6 flex flex-col gap-1 md:gap-2">
-                <span className="text-[#FFFF00] font-headline text-3xl md:text-4xl font-black italic">2K+</span>
+                <span className="text-[#FFFF00] font-headline text-2xl md:text-4xl font-black italic">2K+</span>
                 <span className="font-label uppercase tracking-widest text-[10px] md:text-xs text-tertiary">Active Members</span>
               </div>
               <div className="bg-surface-container-low p-4 md:p-6 flex flex-col gap-1 md:gap-2">
-                <span className="text-[#FFFF00] font-headline text-3xl md:text-4xl font-black italic text-glow">EXPERT</span>
+                <span className="text-[#FFFF00] font-headline text-2xl md:text-4xl font-black italic text-glow">EXPERT</span>
                 <span className="font-label uppercase tracking-widest text-[10px] md:text-xs text-tertiary">Pro Trainers</span>
               </div>
             </div>
@@ -67,11 +67,11 @@ export default function About() {
       </section>
 
       {/* Google Testimonials Section */}
-      <section className="bg-surface py-16 md:py-24 px-6 md:px-12 border-t border-neutral-800">
+      <section className="bg-surface py-12 md:py-24 px-4 md:px-12 border-t border-neutral-800">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12 md:mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-16 gap-6">
             <div>
-              <h2 className="font-headline text-4xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
+              <h2 className="font-headline text-3xl sm:text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none mb-4">
                 WHAT OUR <span className="text-[#FF0033]">MEMBERS SAY</span>
               </h2>
               <div className="flex items-center gap-3">
@@ -97,9 +97,9 @@ export default function About() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
             {testimonials.map((review, index) => (
-              <div key={index} className="bg-surface-container-highest p-6 md:p-8 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
+              <div key={index} className="bg-surface-container-highest p-5 md:p-8 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
                 <div className="flex justify-between items-start mb-6">
                   <div className="flex items-center gap-4">
                     <img src={review.avatar} alt={review.name} className="w-12 h-12 rounded-full" />

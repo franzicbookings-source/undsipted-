@@ -78,7 +78,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <Link to="/">
             <img src="https://i.ibb.co/qMQK3yJ7/292678414-555215579726507-7971978031194556440-n-removebg-preview-1.png" alt="Undisputed Fitness Logo" className="h-12 md:h-16 w-auto" referrerPolicy="no-referrer" />
           </Link>
-          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">Instagram</a>
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">YouTube</a>
             <a className="text-neutral-500 font-headline text-[10px] md:text-xs uppercase tracking-widest hover:text-[#FF0033] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>

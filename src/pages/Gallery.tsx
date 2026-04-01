@@ -12,11 +12,11 @@ export default function Gallery() {
 
   return (
     <Layout>
-      <section className="py-16 md:py-24 px-6 md:px-12 bg-surface min-h-[80vh]">
+      <section className="py-12 md:py-24 px-4 md:px-12 bg-surface min-h-[80vh]">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 md:mb-16 text-center">
-            <h1 className="font-headline text-5xl sm:text-6xl md:text-8xl font-black uppercase italic tracking-tighter">OUR <span className="text-[#FF0033]">GALLERY</span></h1>
-            <p className="font-body text-on-surface-variant text-lg md:text-xl mt-6 max-w-2xl mx-auto">
+          <div className="mb-8 md:mb-16 text-center">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-black uppercase italic tracking-tighter">OUR <span className="text-[#FF0033]">GALLERY</span></h1>
+            <p className="font-body text-on-surface-variant text-base md:text-xl mt-6 max-w-2xl mx-auto">
               Take a look inside the iron sanctuary. The equipment, the atmosphere, the community.
             </p>
           </div>
